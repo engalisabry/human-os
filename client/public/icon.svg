@@ -1,0 +1,17 @@
+<!-- Human OS icon - monochrome, 128x128 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" role="img" aria-label="Human OS icon">
+  <!-- Outer ring -->
+  <circle cx="64" cy="64" r="46" stroke="#1A1A1A" stroke-width="6" fill="#FFFFFF"></circle>
+  <!-- Gear notch (subtle) -->
+  <g transform="translate(88,36) rotate(20)">
+    <path d="M0 0c1.1 2.4 0.9 5.1-0.6 7L-6 10l-3-5 4.5-4c1.6-1.4 3.9-1.7 5.8-0.6z" fill="#1A1A1A" opacity="0.95" transform="translate(-6,-6) scale(0.9)"></path>
+  </g>
+  <!-- Human head -->
+  <circle cx="64" cy="48" r="12" fill="#1A1A1A"></circle>
+  <!-- Human shoulders / torso (stylized) -->
+  <path d="M46 86c0-9 8-18 18-18h0c10 0 18 9 18 18v2H46v-2z" fill="#1A1A1A"></path>
+  <!-- Inner rounded rectangle to suggest dashboard/window -->
+  <rect x="36" y="32" width="56" height="64" rx="10" fill="none" stroke="#E6E6E6" stroke-width="2"></rect>
+  <!-- Accent notch in ring (gap) -->
+  <path d="M64 14c9 0 17 3 24 8" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round" fill="none"></path>
+</svg>

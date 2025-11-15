@@ -1,0 +1,52 @@
+# --- Node ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Next.js ---
+.next/
+out/
+dist/
+.vercel/
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# --- Logs ---
+logs/
+*.log
+*.log.*
+pnpm-debug.log*
+
+# --- System ---
+.DS_Store
+Thumbs.db
+
+# --- Temporary ---
+*.tmp
+*.temp
+
+# --- Editor ---
+.vscode/
+.idea/
+
+# --- Build artifacts ---
+*.tsbuildinfo
+
+# --- Private Knowledge Base (DO NOT UPLOAD) ---
+kb/
+knowledge_base/
+data/private_kb/
+storage/local_kb/
+private_resources/
+
+# --- Uploaded files or user content ---
+uploads/
+public/uploads/
+
+# --- Python (if any local scripts) ---
+__pycache__/
+*.pyc
