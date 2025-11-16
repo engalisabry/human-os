@@ -1,41 +1,13 @@
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
+import { RouterProvider } from "react-router";
 
-import Goals from "@/routes/Goals";
-import Habits from "@/routes/Habits";
-import Layout from "@/routes/Layout";
-import Mood from "@/routes/Mood";
-import NotFound from "@/routes/NotFound";
+import { ThemeProvider } from "@/components/ui/theme-provider";
+import router from "./router";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <Navigate to="/" replace />,
-      },
-      {
-        path: "mood",
-        element: <Mood />,
-      },
-      {
-        path: "goals",
-        element: <Goals />,
-      },
-      {
-        path: "habits",
-        element: <Habits />,
-      },
-      { path: "*", element: <NotFound /> },
-    ],
-  },
-]);
 
 export default function App() {
   return (
-    <>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <RouterProvider router={router} />
-    </>
+    </ThemeProvider>
   );
 }

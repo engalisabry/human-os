@@ -8,7 +8,6 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
 import prettierConfig from "eslint-plugin-prettier/recommended";
-import perfectionist from "eslint-plugin-perfectionist";
 
 export default defineConfig([
   globalIgnores(["dist"]),
@@ -26,16 +25,21 @@ export default defineConfig([
       globals: globals.browser,
     },
     plugins: {
-      perfectionist,
       react: pluginReact,
       "react-hooks": pluginReactHooks,
       "jsx-a11y": pluginJsxA11y,
     },
     rules: {
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": ["error"],
+
+      // React & hooks
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
+
+      // Perfectionist: only import sorting
       "perfectionist/sort-imports": [
         "error",
         {
@@ -54,18 +58,10 @@ export default defineConfig([
           ],
         },
       ],
-      "prettier/prettier": [
-        "error",
-        {
-          singleQuote: false,
-          printWidth: 100,
-          tabWidth: 2,
-          semi: true,
-          trailingComma: "es5",
-          bracketSpacing: true,
-          endOfLine: "lf",
-        },
-      ],
+      "perfectionist/sort-interfaces": "off",
+      "perfectionist/sort-union-types": "off",
+      "perfectionist/sort-objects": "off",
+      "perfectionist/sort-arrays": "off",
     },
   },
 ]);
